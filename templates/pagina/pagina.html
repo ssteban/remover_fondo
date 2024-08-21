@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Imagen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Remover Fondo de Imagen</h1>
+    </header>
+
+    <div class="montar">
+        <div class="upload-box" id="uploadBox">
+            <input type="file" id="imagen_remover" accept="image/*">
+            <p>Haz clic aquí o arrastra y suelta una imagen</p>
+        </div>
+        <div class="preview" id="preview">
+            <!-- Aquí se mostrará la vista previa de la imagen -->
+        </div>
+        <button onclick="remover()">Remover</button>
+    </div>
+
+    <div class="images-container" id="imagesContainer">
+
+    </div>
+
+    <div class="download-button" id="downloadButtonContainer">
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Herramienta de Remoción de Fondo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

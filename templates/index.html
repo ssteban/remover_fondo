@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Remover Fondo de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px; /* Espacio entre columnas */
+        }
+
+        .image-container {
+            position: relative;
+            width: 40%; 
+            height: auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Simulación del fondo removido */
+            z-index: 1;
+        }
+
+        .intro {
+            width: 50%; /* Ajusta el ancho al 50% */
+        }
+
+        .intro h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Remover Fondo de Imágenes</h1>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="image-container">
+                <img src="https://th.bing.com/th/id/OIP.q3d9QICj4SN-Y8oizvtUIAHaH0?rs=1&pid=ImgDetMain" alt="Ejemplo de remoción de fondo">
+            </div>
+            <section class="intro">
+                <h2>Bienvenido a nuestra herramienta de remoción de fondo</h2>
+                <p>
+                    Esta página te permite subir imágenes y remover su fondo de manera sencilla y rápida.
+                    Simplemente selecciona una imagen desde tu dispositivo, haz clic en el botón "Remover Fondo",
+                    y obtendrás una imagen sin fondo en segundos.
+                </p>
+                
+                <form action="/pagina", method="get">
+                    <section class="actions">
+                        <button type="submit">Remover Fondo</button>
+                    </section>
+                </form>
+            </section>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Herramienta de Remoción de Fondo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
