@@ -1,0 +1,1 @@
+# remover_fondo
